@@ -5,10 +5,10 @@ const params = new URLSearchParams({
 	token: 'f32a95626e4e461eb8b47aecd6d6cc05' // Replace with your actual API key
 });
 
-console.log(`${baseUrl}?${params}`);
-
 // Make the GET request
-fetch(`${baseUrl}?${params}`)
+fetch(`${baseUrl}?${params}`, {
+	Method: 'GET'
+})
 	.then(response => response.json())
 	.then(data => {
 		// Handle the response
